@@ -7,8 +7,11 @@
 </head>
 <body>
    <?php
-      $sek = $_POST['amount'];
-      echo "You entered $sek SEK<br>";
+      $dollar = $_POST['amount'];
+      $sek = $dollar * 9.7;
+
+      echo "<p>$dollar $  =  $sek kr</p>";
+
       ?>
 </body>
-</html>" step
+</html>
