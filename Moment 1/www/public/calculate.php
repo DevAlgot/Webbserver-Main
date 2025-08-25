@@ -6,6 +6,8 @@
    <title>Document</title>
 </head>
 <body>
-   
+   <?php
+      $sek = $_POST['amount'];
+      echo "You entered $sek SEK<br>";
 </body>
 </html>
