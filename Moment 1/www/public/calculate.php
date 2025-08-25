@@ -11,7 +11,6 @@
       $sek = $dollar * 9.7;
 
       echo "<p>$dollar $  =  $sek kr</p>";
-
       ?>
 </body>
 </html>
