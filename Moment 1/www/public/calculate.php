@@ -9,5 +9,6 @@
    <?php
       $sek = $_POST['amount'];
       echo "You entered $sek SEK<br>";
+      ?>
 </body>
-</html>
+</html>" step
