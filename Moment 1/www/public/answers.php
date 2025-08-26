@@ -8,11 +8,20 @@
 <body>
     <main>
         <?php
-            $ans1 = $_POST['qOne'];
+            $correct = [
+                0 => "php",
+                1 => "js",
+                2 => 
+            ];
 
             for ($i=0; $i < 2; $i++) { 
                 $ans = $_POST['q'. ($i+1)];
-                echo "<p>Svar:" . $ans  . "</p>";
+                
+                if($correct[$i] == $ans) {
+                    echo "<p>Svar:" . $ans  . " Rätt</p>";
+                } else {
+                    echo "<p>Svar:" . $ans  . " Fel</p>";
+                }
             }
 
         ?>
