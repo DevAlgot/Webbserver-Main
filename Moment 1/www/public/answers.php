@@ -10,7 +10,11 @@
         <?php
             $correct = [
                 0 => "php",
-                1 => "js"
+                1 => "js",
+                2 => "html",
+                3 => "css",
+                4 => "sql",
+                5 => "html"
             ];
 
             $points = 0;
