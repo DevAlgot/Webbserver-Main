@@ -10,7 +10,11 @@
         <?php
             $ans1 = $_POST['qOne'];
 
-            echo "<p>Fråga 1: $ans1</p>";
+            for ($i=0; $i < 2; $i++) { 
+                $ans = $_POST['q'. ($i+1)]
+                echo "<p>Svar:" . $ans  . "</p>";
+            }
+
         ?>
     </main>
 </body>
