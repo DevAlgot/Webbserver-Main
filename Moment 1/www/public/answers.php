@@ -11,7 +11,7 @@
             $ans1 = $_POST['qOne'];
 
             for ($i=0; $i < 2; $i++) { 
-                $ans = $_POST['q'. ($i+1)]
+                $ans = $_POST['q'. ($i+1)];
                 echo "<p>Svar:" . $ans  . "</p>";
             }
 
