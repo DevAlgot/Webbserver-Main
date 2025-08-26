@@ -8,11 +8,11 @@
 <body>
     <main>
         <?php
-            $n1 = $_POST['n1'];
-            $n2 = $_POST['n2'];
+            $n1 = $_GET['num1'];
+            $n2 = $_GET['num2'];
             $sum = $n1 + $n2;
 
-            echo "<p>$n1 + $n2 = $sum</p>";
+            echo "<p>$n1 + $n2 = {$sum}kr</p>";
         ?>
     </main>
 </body>
