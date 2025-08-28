@@ -13,6 +13,7 @@
         $data["name"] = ($_POST['name']);
         $data["email"] = ($_POST['email']);
         $data["password"] = ($_POST['password']);
+        $data["surname"] = ($_POST['surname']);
 
 
 
