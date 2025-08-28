@@ -10,21 +10,22 @@
         include("inc/secure.php");
         mb_internal_encoding("UTF-8");
 
-        $data = "";
+        $data["name"] = $_POST['name'];
+
 
 
         if(isset($_POST['name'])){
             $name = $_POST['name'];
 
             if(!mb_check_encoding($_POST['name'], 'UTF-8')){
-                header("Location: index.php");
+                header("location: index.php");
             }
 
             $name = secure($name);
             echo "<p>Hej $name</p>";
-            
+
         } else{
-            header("Location: index.php");
+            header("location: index.php");
         }
     ?>
 </body>
