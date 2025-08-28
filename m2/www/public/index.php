@@ -11,21 +11,11 @@
 </head>
 
 <body>
-   <?php include("header.html");?>
    <main>
-      <h1>Matematik-test</h1>
-      <form action="evaluate.php" method="post">
-         <fieldset id="questions">
-            <legend>Frågor</legend>
-            <div class="question">
-               <label>Namn: </label>
-               <input type="text" name="name">
-            </div>
-
-         </fieldset>
-      </form>
+      <?php
+         echo strip_tags("<p>Hej <i><b>världen!</b></i></p>", "<p><b>");
+      ?>
    </main>
-   <?php include("footer.html");?>
 </body>
 
 </html>
