@@ -1,18 +1,12 @@
-<!doctype html>
-<html>
-
-<head lang="sv">
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <script src="script.js"></script>
-   <link rel="stylesheet" href="style.css">
-   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-
 <body>
-   <main>
-      <?php
+    <?php
          include("inc/math.php");
 
          echo strip_tags("<p>Hej <i><b>världen!</b></i></p>", "<p><b>");
@@ -37,13 +31,5 @@
          echo "<p>" . divide(5, 0) . "</p>";
          echo "<p>" . divide(5, 3) . "</p>";
        ?>
-
-      <form action="user.php" method="post">
-         <label for="name">Namn:</label>
-         <input type="text" name="name">
-         <input type="submit" value="Skicka">
-      </form>
-   </main>
 </body>
-
 </html>
