@@ -13,11 +13,15 @@
 <body>
    <main>
       <?php
+         include("inc/math.php");
+
          echo strip_tags("<p>Hej <i><b>världen!</b></i></p>", "<p><b>");
 
+         $nums = "";
          for ($i=0; $i <= 5; $i+=0.1) { 
-            echo "<p>Nummer: " . $i . "</p>";
+            $nums += $i . " ";
          }
+         echo "<p>$nums</p>";
 
          $page["head"] = "<h1>Välkommen</h1>";
          $page["body"] = "<p>Detta är innehållet på min sida</p>";
@@ -27,6 +31,11 @@
             echo $section;
          }
 
+         echo "<p>" . add(5, 3) . "</p>";
+         echo "<p>" . subtract(5, 3) . "</p>";
+         echo "<p>" . multiply(5, 3) . "</p>";
+         echo "<p>" . divide(5, 0) . "</p>";
+         echo "<p>" . divide(5, 3) . "</p>";
        ?>
    </main>
 </body>
