@@ -10,10 +10,17 @@
         include("inc/secure.php");
         mb_internal_encoding("UTF-8");
 
-        $data["name"] = $_POST['name'];
+        $data["name"] = ($_POST['name']);
+        $data["email"] = ($_POST['email']);
+        $data["password"] = ($_POST['password']);
 
 
 
+        foreach($data as $identifier){
+            if(isset($identifier)){
+                echo "<p>$identifier</p>";
+            }
+        }
         if(isset($_POST['name'])){
             $name = $_POST['name'];
 
