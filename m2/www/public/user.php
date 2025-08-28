@@ -14,9 +14,15 @@
 
 
         if(isset($_POST['name'])){
-            mb_check_encoding($_POST['name'], 'UTF-8');
+            $name = $_POST['name'];
+
+            if(!mb_check_encoding($_POST['name'], 'UTF-8')){
+                header("Location: index.php");
+            }
+
             $name = secure($name);
             echo "<p>Hej $name</p>";
+            
         } else{
             header("Location: index.php");
         }
