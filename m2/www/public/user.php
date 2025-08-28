@@ -18,22 +18,18 @@
 
         foreach($data as $identifier){
             if(isset($identifier)){
-                echo "<p>$identifier</p>";
-            }
-        }
-        if(isset($_POST['name'])){
-            $name = $_POST['name'];
+                if(!mb_check_encoding($identifier, 'UTF-8')){
+                    header("Location: index.html");
+                }
 
-            if(!mb_check_encoding($_POST['name'], 'UTF-8')){
+                $identifier = secure($identifier);
+
+                echo "<p>$identifier</p>";
+            } else {
                 header("Location: index.html");
             }
-
-            $name = secure($name);
-            echo "<p>Hej $name</p>";
-
-        } else{
-            header("Location: index.html");
         }
+
     ?>
 </body>
 </html>
