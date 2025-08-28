@@ -33,11 +33,11 @@
             }
 
             if ($points <= 2 && $points >= 0) {
-                echo "<p>Läs på mer och försök igen</p>"
+                echo "<p>Läs på mer och försök igen</p>";
             } elseif ($points >= 3 && $points <= 4 ) {
-                echo "<p> Godkänd</p>"
+                echo "<p> Godkänd</p>";
             } elseif ($points >= 5) {
-                echo "<p>Bra, du behärskar det mesta. </p>"
+                echo "<p>Bra, du behärskar det mesta. </p>";
             }
             echo "<p>Totala poäng: " . $points . "/$i</p>";
 
