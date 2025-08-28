@@ -31,12 +31,18 @@
             echo $section;
          }
 
-         echo "<p>" . add(5, 3) . "</p>";
+         echo "<h1>Uppgift 4 </h1> < br> <p>" . add(5, 3) . "</p>";
          echo "<p>" . subtract(5, 3) . "</p>";
          echo "<p>" . multiply(5, 3) . "</p>";
          echo "<p>" . divide(5, 0) . "</p>";
          echo "<p>" . divide(5, 3) . "</p>";
        ?>
+
+      <form action="user.php" method="post">
+         <label for="name">Namn:</label>
+         <input type="text" name="name">
+         <input type="submit" value="Skicka">
+      </form>
    </main>
 </body>
 
