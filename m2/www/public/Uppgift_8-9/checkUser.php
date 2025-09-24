@@ -1,8 +1,8 @@
 <?php
-include("../inc/users.php");
-include("secure.php");
+include("../../inc/users.php");
+include("../secure.php");
 
-$file = "../inc/person.dat";
+$file = "../../inc/person.dat";
 $users = unserialize(file_get_contents($file));
 echo $users[0]->getUsername();
 
@@ -19,4 +19,4 @@ for ($i = 0; $i < count($users); $i++) {
     }
 }
 
-header("location: index.php");
+header("location: ../index.php");

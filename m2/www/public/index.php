@@ -7,7 +7,9 @@
    <title>Document</title>
    <script src="script.js"></script>
    <link rel="stylesheet" href="style.css">
-
+   <?php
+   include("secure.php");
+   ?>
 </head>
 
 <body>
@@ -17,26 +19,14 @@
       </form>
 
       <h2>Uppgift 5/6</h2>
-      <form action="user.php" method="post">
-         <label for="name">Namn:</label>
-         <input type="text" name="name">
-
-         <label for="surname">Efternamn: </label>
-         <input type="text" name="surname">
-
-         <label for="email">E-post:</label>
-         <input type="email" name="email">
-
-         <label for="password">Lösenord</label>
-         <input type="password" name="password">
-
-         <input type="submit" value="Skicka">
-
+      <form action="uppgift5.php" method="post">
+         <input type="submit" value="Uppgift 5 - 6">
 
       </form>
 
+
       <h2>Uppgift 8-9</h2>
-      <form action="checkUser.php" method="post">
+      <form action="Uppgift_8-9/checkUser.php" method="post">
          <label for="user">Username</label>
          <input name="user" type="text">
 
@@ -45,7 +35,7 @@
 
          <input type="submit" value="Log in">
       </form>
-      <form action="signup.php" method="post">
+      <form action="Uppgift_8-9/signup.php" method="post">
          <label for="user">Username</label>
          <input name="user" type="text">
 

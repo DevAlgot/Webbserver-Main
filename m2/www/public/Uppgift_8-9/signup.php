@@ -1,8 +1,8 @@
 <?php
-include "secure.php";
-include "../inc/users.php";
+include "../secure.php";
+include "../../inc/users.php";
 
-$file = "../inc/person.dat";
+$file = "../../inc/person.dat";
 
 
 $name = checkSet("user");
@@ -17,4 +17,4 @@ $user = new Person($email, $pass, $name);
 $userarr[] = $user;
 
 file_put_contents($file, serialize($userarr));
-header("location: index.php");
+header("location: ../index.php");

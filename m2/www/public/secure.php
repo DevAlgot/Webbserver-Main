@@ -10,5 +10,12 @@ function cleanData($data)
 function checkSet($data)
 {
     if (isset($_POST[$data])) return $_POST[$data];
-    else header("Location: index.php");
+    else return "";
+}
+
+
+function checkSetGet($data)
+{
+    if (isset($_GET[$data])) return $_GET[$data];
+    else return "";
 }
