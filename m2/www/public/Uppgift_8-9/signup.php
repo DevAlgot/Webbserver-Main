@@ -1,6 +1,5 @@
 <?php
 include "../secure.php";
-include "../../inc/users.php";
 
 $file = "../../inc/person.dat";
 
@@ -13,6 +12,7 @@ $name = cleanData($name);
 $pass = cleanData($pass);
 $email = cleanData($email);
 
+$userarr  = unserialize(file_get_contents($file));
 $user = new Person($email, $pass, $name);
 $userarr[] = $user;
 
