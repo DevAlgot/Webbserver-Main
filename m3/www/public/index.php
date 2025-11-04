@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+	session_start();
+}
+
+?>
+
 <!doctype html>
 <html lang="sv">
 
@@ -32,23 +39,46 @@
 				if (isset($_GET['page']))
 					$page = $_GET['page'];
 
-				switch ($page) {
-					case 'blogg':
-						include('pages/blogg.php');
-						break;
-					case 'bilder':
-						include('pages/bilder.php');
-						break;
-					case 'kontakt':
-						include('pages/kontakt.php');
-						break;
-					case 'login':
-						include('pages/login.php');
-						break;
-					default:
-						include('pages/start.php');
+				if (isset($_SESSION["inloggad"])) {
+					switch ($page) {
+						case 'blogg':
+							include('pages/blogg.php');
+							break;
+						case 'bilder':
+							include('pages/bilder.php');
+							break;
+						case 'kontakt':
+							include('pages/kontakt.php');
+							break;
+						case 'login':
+							include('pages/loggout.php');
+							break;
+						case 'klotter':
+							include('pages/klotter.php');
+							break;
+						default:
+							include('pages/start.php');
+					}
+				} else {
+					switch ($page) {
+						case 'blogg':
+							include('pages/blogg.php');
+							break;
+						case 'bilder':
+							include('pages/bilder.php');
+							break;
+						case 'kontakt':
+							include('pages/kontakt.php');
+							break;
+						case 'login':
+							include('pages/login.php');
+							break;
+						default:
+							include('pages/start.php');
+					}
 				}
 				?>
+
 
 			</section>
 		</main>
