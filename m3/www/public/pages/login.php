@@ -29,7 +29,9 @@ if (file_exists("../inc/users.dat")) {
     }
 
     echo ("Fel användarnamn eller lösenord");
-    $users = unserialize(file_get_contents("../inc/users.dat"));
+    if (file_exists("../inc/users.dat")) {
+        $users = unserialize(file_get_contents("../inc/users.dat"));
+    }
 }
 
 

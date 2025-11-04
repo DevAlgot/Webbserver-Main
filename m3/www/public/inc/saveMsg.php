@@ -1,6 +1,6 @@
 <?php
 include("../support.php");
-$allowedTags = ["<b>", "<i>", "<u>"];
+$allowedTags = ["<b>", "<i>", "<u>", "<style>"];
 
 $name = '<p>Från: ' . checkSet("name") . '</p>';
 $message = "<p>" . checkSet("message") . "</p>";
